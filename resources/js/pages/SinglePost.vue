@@ -2,9 +2,10 @@
     <div class="container mt-3">
         <div class="card">
             <h5 class="card-header"> {{ post.title }} </h5>
+            <img v-if="post.cover" :src="post.cover" :alt=" post.title" class="card-img-top">
+
             <div class="card-body">
                 <h5 class="card-title" v-if="post.category"> {{ post.category.name }} </h5>
-                <img :src="post.cover" :alt=" post.title">
                 <p class="card-text"> {{ post.content }} </p>
                 <Tag :tags="post.tags"/>
 
