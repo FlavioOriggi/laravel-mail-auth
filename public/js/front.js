@@ -2274,7 +2274,7 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this = this;
 
-    axios.get('/api/post/' + this.$route.params.slug).then(function (response) {
+    axios.get('/api/posts/' + this.$route.params.slug).then(function (response) {
       _this.post = response.data.results;
       console.log(_this.post);
     })["catch"](function (error) {

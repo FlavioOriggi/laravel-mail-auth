@@ -40,5 +40,6 @@ class ContactController extends Controller
 
         Mail::to('info@boolpress.com')->send(new SendNewMail($new_lead));
 
+        return response()->json( ['success' => true ] );
     }
 }
